@@ -16,7 +16,8 @@
 #' @import BiocGenerics
 #' @import VariantAnnotation
 #' @import rtracklayer
-#' @import Biostrings
+#' @importFrom Biostrings DNAString reverseComplement
+#' @importFrom pwalign pairwiseAlignment nucleotideSubstitutionMatrix
 #' @import GenomicRanges
 #' @import StructuralVariantAnnotation
 #' @import S4Vectors
