@@ -21,7 +21,8 @@
 #' @import GenomicRanges
 #' @import StructuralVariantAnnotation
 #' @import S4Vectors
-#' @import GenomeInfoDb
+#' @import Seqinfo
+#' @importFrom GenomeInfoDb standardChromosomes
 #' @import GenomicFeatures
 #' @importFrom dplyr %>%
 #' @importFrom methods as is setMethod setGeneric

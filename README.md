@@ -97,7 +97,8 @@ library(readr)
 numtS <- read_table(system.file("extdata", "numtS.txt", package = "svaNUMT"), 
     col_names = FALSE)
 colnames(numtS) <- c("bin", "seqnames", "start", "end", "name", "score", "strand")
-numtS <- `seqlevelsStyle<-`(GRanges(numtS), "NCBI")
+numtS <- GRanges(numtS)
+GenomeInfoDb::seqlevelsStyle(numtS) <- "NCBI"
 
 library(BSgenome.Hsapiens.UCSC.hg19)
 genome <- BSgenome.Hsapiens.UCSC.hg19

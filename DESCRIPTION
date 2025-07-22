@@ -1,8 +1,8 @@
 Package: svaNUMT
 Type: Package
 Title: NUMT detection from structural variant calls
-Version: 1.15.0
-Date: 2024-04-24
+Version: 1.15.1
+Date: 2025-07-22
 Authors@R: c(
 	person("Ruining", "Dong", email="lnyidrn@gmail.com", role=c("aut", "cre"), comment=c(ORCID = "0000-0003-1433-0484")))
 Description: svaNUMT contains functions for detecting NUMT events from structural variant calls. 
@@ -25,8 +25,9 @@ Imports:
     dplyr,
     methods,
     rlang,    
-    GenomeInfoDb,
     S4Vectors,
+    Seqinfo,
+    GenomeInfoDb,
     GenomicFeatures,
     pwalign
 Suggests:

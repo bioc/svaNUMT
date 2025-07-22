@@ -16,7 +16,8 @@
 #' gr <- breakpointRanges(vcf, nominalPosition=TRUE)
 #' numtS <- readr::read_table(system.file("extdata", "numtS.txt", package = "svaNUMT"), col_names = FALSE)
 #' colnames(numtS) <- c("bin", "seqnames", "start", "end", "name", "score", "strand")
-#' numtS <- `seqlevelsStyle<-`(GRanges(numtS), "NCBI")
+#' numtS <- GRanges(numtS)
+#' GenomeInfoDb::seqlevelsStyle(numtS) <- "NCBI"
 #' genome <- BSgenome.Hsapiens.UCSC.hg19::BSgenome.Hsapiens.UCSC.hg19
 #' genomeMT <- genome$chrMT
 #' numt.gr <- numtDetect(gr, numtS, genomeMT, max_ins_dist=20)

@@ -6,7 +6,8 @@ numt <- readVcf(system.file("extdata", "MT.vcf", package = "svaNUMT"))
 #known NUMTs as GRanges
 numtS <- read_table(system.file("extdata", "numtS.txt", package = "svaNUMT"), col_names = FALSE)
 colnames(numtS) <- c("bin", "seqnames", "start", "end", "name", "score", "strand")
-numtS <- `seqlevelsStyle<-`(GRanges(numtS), "NCBI")
+numtS <- GRanges(numtS)
+GenomeInfoDb::seqlevelsStyle(numtS) <- "NCBI"
 #mitochondria reference genome
 genomeMT <- BSgenome.Hsapiens.UCSC.hg19$chrMT
 #default numtDetect() parameters
